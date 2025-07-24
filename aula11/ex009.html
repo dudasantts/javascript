@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        .box {
+            background-color: antiquewhite;
+            max-width: 40%;
+            height: 45vh;
+            margin: auto;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+        p {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        input {
+            height: 20px;
+            margin-left: 10px;
+        }
+        #btn {
+            margin: 10px;
+            height: 30px;
+            border: 1px solid rgb(255, 2, 87);
+            border-radius: 5px;
+            background-color: rgb(216, 216, 236);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Informações Pessoais</h1>
+        <p>Nome:</p>
+        <input type="text" id="nome">
+        <p>País:</p>
+        <input type="text" id="país"> <br>
+        <input type="button" value="Verificar" id="btn" onclick="verificacao()">
+        <div id="res"></div>
+    </div>
+    
+    <script>
+        function verificacao() {
+            var n = window.document.getElementById('nome')
+            var p = window.document.getElementById('país')
+            var res = window.document.getElementById('res')
+            var nacionalidade = (p.value)
+
+            res.innerHTML = `<p>Seu nome é <strong>${n.value}</strong></p>`
+
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
