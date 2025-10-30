@@ -16,9 +16,12 @@ function verificar() {
             if(idade >=0 && idade < 10) {
                 //criança
                 img.setAttribute('src', 'menininho.png')  
-            } else if (idade < 30) {
+            } else if (idade < 30 ) {
                 //jovem
                 img.setAttribute('src', 'h-jovem.png')
+            } else if (idade >= 30 && idade < 45) {
+                //adulto jovem
+                img.setAttribute('src', 'homem-30+.png')
             } else if (idade < 60) {
                 //adulto
                 img.setAttribute('src', 'homem.png')
@@ -34,6 +37,9 @@ function verificar() {
             } else if (idade < 30) {
                 //jovem
                 img.setAttribute('src', 'm-jovem.png')
+            } else if (idade >= 30 && idade < 45) {
+                //adulto jovem
+                img.setAttribute('src', 'mulher-30+.png')
             } else if (idade < 60) {
                 //adulto
                 img.setAttribute('src', 'mulher.png')
